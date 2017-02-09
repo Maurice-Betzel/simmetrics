@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,9 +20,7 @@
 
 package org.simmetrics.metrics;
 
-import static java.util.Arrays.asList;
-import static org.simmetrics.tokenizers.Tokenizers.qGram;
-
+import com.google.common.collect.Multiset;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.simmetrics.Distance;
@@ -30,7 +28,8 @@ import org.simmetrics.Metric;
 import org.simmetrics.MultisetDistanceTest;
 import org.simmetrics.MultisetMetricTest;
 
-import com.google.common.collect.Multiset;
+import static java.util.Arrays.asList;
+import static org.simmetrics.tokenizers.Tokenizers.qGram;
 
 @SuppressWarnings("javadoc")
 @RunWith(Enclosed.class)

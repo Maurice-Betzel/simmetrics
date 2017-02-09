@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,8 @@
 
 package org.simmetrics.simplifiers;
 
-import static com.google.common.base.Joiner.on;
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-import static com.google.common.collect.Lists.asList;
-import static java.util.Arrays.asList;
+import com.google.common.collect.ImmutableList;
+import org.simmetrics.builders.StringMetricBuilder;
 
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
@@ -34,9 +31,10 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.simmetrics.builders.StringMetricBuilder;
-
-import com.google.common.collect.ImmutableList;
+import static com.google.common.base.Joiner.on;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.collect.Lists.asList;
 
 /**
  * Construct simple simplifiers or chain multiple simplifiers into a single

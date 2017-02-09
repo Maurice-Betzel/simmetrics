@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,17 +20,17 @@
 
 package org.simmetrics.metrics;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-import static org.simmetrics.metrics.Math.max;
-
 import org.simmetrics.StringMetric;
 import org.simmetrics.metrics.functions.AffineGap;
 import org.simmetrics.metrics.functions.Gap;
 import org.simmetrics.metrics.functions.MatchMismatch;
 import org.simmetrics.metrics.functions.Substitution;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static org.simmetrics.metrics.Math.max;
 
 /**
  * Applies the Smith-Waterman algorithm to calculate the similarity between two

@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,12 +20,12 @@
 
 package org.simmetrics.metrics;
 
-import static org.simmetrics.metrics.Math.intersection;
-import static java.lang.Math.sqrt;
+import org.simmetrics.SetMetric;
 
 import java.util.Set;
 
-import org.simmetrics.SetMetric;
+import static java.lang.Math.sqrt;
+import static org.simmetrics.metrics.Math.intersection;
 
 /**
  * Calculates the Tanimoto similarity coefficient over two sets. The

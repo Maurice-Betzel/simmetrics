@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,11 +20,15 @@
 
 package org.simmetrics.builders;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-import static org.simmetrics.builders.StringDistances.create;
-import static org.simmetrics.builders.StringDistances.createForListDistance;
-import static org.simmetrics.builders.StringDistances.createForMultisetDistance;
-import static org.simmetrics.builders.StringDistances.createForSetDistance;
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.cache.Cache;
+import com.google.common.collect.Multiset;
+import org.simmetrics.*;
+import org.simmetrics.simplifiers.Simplifier;
+import org.simmetrics.simplifiers.Simplifiers;
+import org.simmetrics.tokenizers.Tokenizer;
+import org.simmetrics.tokenizers.Tokenizers;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,20 +37,8 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
-import org.simmetrics.ListDistance;
-import org.simmetrics.Distance;
-import org.simmetrics.MultisetDistance;
-import org.simmetrics.SetDistance;
-import org.simmetrics.StringDistance;
-import org.simmetrics.simplifiers.Simplifier;
-import org.simmetrics.simplifiers.Simplifiers;
-import org.simmetrics.tokenizers.Tokenizer;
-import org.simmetrics.tokenizers.Tokenizers;
-
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.cache.Cache;
-import com.google.common.collect.Multiset;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static org.simmetrics.builders.StringDistances.*;
 
 /**
  * Convenience tool to build string distance metrics. Any class implementing

@@ -8,7 +8,8 @@
 
 	<artifactId>simmetrics-core</artifactId>
 	<name>Simmetrics Core</name>
-	<packaging>jar</packaging>
+    <version>4.1.1.0</version>
+	<packaging>bundle</packaging>
 
 	<dependencies>
 
@@ -23,7 +24,6 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.10</version>
 		</dependency>
-
 		
 		<dependency>
 			<groupId>com.google.caliper</groupId>
@@ -53,4 +53,24 @@
 			<scope>test</scope>
 		</dependency>		
 	</dependencies>
+
+	<build>
+		<plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>3.0.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Description>${project.description}</Bundle-Description>
+                        <Export-Package>org.simmetrics.*</Export-Package>
+                        <Import-Package>*</Import-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+		</plugins>
+	</build>
+
 </project>

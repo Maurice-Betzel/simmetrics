@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,16 +20,16 @@
 
 package org.simmetrics.metrics;
 
-import static java.util.Arrays.asList;
-
-import java.util.Set;
-
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.simmetrics.Distance;
 import org.simmetrics.SetDistanceTest;
 import org.simmetrics.SetMetric;
 import org.simmetrics.SetMetricTest;
+
+import java.util.Set;
+
+import static java.util.Arrays.asList;
 
 @SuppressWarnings("javadoc")
 @RunWith(Enclosed.class)

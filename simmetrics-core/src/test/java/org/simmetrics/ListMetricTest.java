@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,13 +20,13 @@
 
 package org.simmetrics;
 
-import static java.util.Arrays.asList;
-import static java.util.Collections.emptyList;
-import static org.simmetrics.tokenizers.Tokenizers.whitespace;
+import org.simmetrics.tokenizers.Tokenizer;
 
 import java.util.List;
 
-import org.simmetrics.tokenizers.Tokenizer;
+import static java.util.Arrays.asList;
+import static java.util.Collections.emptyList;
+import static org.simmetrics.tokenizers.Tokenizers.whitespace;
 
 @SuppressWarnings("javadoc")
 public abstract class ListMetricTest extends CollectionMetricTest<String,List<String>> {

@@ -2,7 +2,7 @@
  * #%L
  * Simmetrics Core
  * %%
- * Copyright (C) 2014 - 2016 Simmetrics Authors
+ * Copyright (C) 2014 - 2017 Simmetrics Authors
  * %%
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,14 +20,14 @@
 
 package org.simmetrics.metrics;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static java.lang.Math.max;
-import static java.lang.Math.sqrt;
+import org.simmetrics.ListMetric;
+import org.simmetrics.StringMetric;
 
 import java.util.List;
 
-import org.simmetrics.ListMetric;
-import org.simmetrics.StringMetric;
+import static com.google.common.base.Preconditions.checkArgument;
+import static java.lang.Math.max;
+import static java.lang.Math.sqrt;
 
 /**
  * Calculates the normalized Monge-Elkan distance (similarity) over two strings.
